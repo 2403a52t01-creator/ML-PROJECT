@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>🏠 House Price Prediction</h1>
+
+    <form action="/predict" method="post">
+        <input type="text" name="area" placeholder="Area (sq ft)" required>
+        <input type="text" name="bedrooms" placeholder="Bedrooms" required>
+        <input type="text" name="bathrooms" placeholder="Bathrooms" required>
+
+        <button type="submit">Predict Price</button>
+    </form>
+
+    <h2>{{ prediction_text }}</h2>
+</div>
+
+</body>
+</html>
